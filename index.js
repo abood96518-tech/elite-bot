@@ -2,10 +2,10 @@ const { Client, GatewayIntentBits } = require('discord.js');
 const http = require('http');
 
 const client = new Client({ 
-    intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] 
+    intents: [GatewayIntentBits.Guilds] 
 });
 
-// سيرفر بسيط ليبقى البوت شغالاً 24 ساعة
+// سيرفر بسيط لإبقاء البوت متصلاً 24 ساعة
 http.createServer((req, res) => {
     res.write("Bot is alive!");
     res.end();
